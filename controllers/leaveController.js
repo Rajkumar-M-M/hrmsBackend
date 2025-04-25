@@ -142,7 +142,7 @@ const getLeaveBalanceDetails = async (req, res) => {
 
     try {
         // Query the database using leaveType and year
-        const leaveDetails = await LeaveModel.find({ leaveType, year });
+        const leaveDetails = await Leave.find({ leaveType, year });
 
         // Check if leaveDetails is an empty array
         if (!leaveDetails.length) {

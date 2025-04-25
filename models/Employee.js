@@ -9,6 +9,7 @@ const employeeSchema = new Schema ({
     maritalStatus: {type:String},
     designation: {type: String},
     department: {type: Schema.Types.ObjectId,  ref:"Department", required:true},
+    // department: {type: String},
     location: {type:String},
     createdAt: {type: Date, default:Date.now},
     updatedAt: {type: Date, default:Date.now},

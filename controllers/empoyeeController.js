@@ -19,18 +19,28 @@ const upload = multer({storage: storage})
 
 const addEmployee = async (req, res) => {
     try {
+        console.log(req.body);
+        
     const {
         name,
-        email,
+        lastname,
+        personalEmail,
+        address,
+        professionalEmail : email,
+        city,
+        state,
+        zipcode,
         employeeId,
+        employeetype,
         dob,
         gender,
         maritalStatus,
         designation,
         department,
-        location,
         password,
         role,
+        officelocation,
+        accessEmail,
     } = req.body;
 
     const user = await User.findOne({email})
@@ -63,7 +73,7 @@ const addEmployee = async (req, res) => {
         maritalStatus,
         designation,
         department,
-        location
+        location: address,
     })
 
     await newEmployee.save()

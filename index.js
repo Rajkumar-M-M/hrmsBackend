@@ -25,5 +25,5 @@ app.use('/api/dashboard', dashboardRouter)
 
 
 app.listen(process.env.PORT, () => {
-    console.log(`server is running on port ${process.env.PORT}`)
+    console.log(`Server running on http://localhost:${process.env.PORT}`)
 })
